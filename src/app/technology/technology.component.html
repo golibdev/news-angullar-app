@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <input class="form-control mr-sm-2 mb-3" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="keyword" (ngModelChange)="onNewsFilter()">
+    <div class="row">
+        <div class="col-lg-4 mt-3 mb-3" *ngFor="let d of technologyDisplay;">
+            <div class="box">
+                <img src="{{d.urlToImage}}" alt="news image" width="100%">
+            <h5 class="w-bold">
+                {{ d.title }}
+            </h5>
+            <a href="{{d.url}}" target="_blank" class="btn btn-dark">
+                Read more
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
